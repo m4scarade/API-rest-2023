@@ -11,6 +11,35 @@
         <a href="index.html">Retour à l'accueil</a>
     </div>
     <div id="data"></div>
+    <div class="recherche_voiture">
+    <form id="addVehicleForm">
+        <label for="make">Marque:</label>
+        <input type="text" id="make" name="make" required>
+    
+        <label for="model">Modèle:</label>
+        <input type="text" id="model" name="model" required>
+    
+        <label for="year">Année:</label>
+        <input type="number" id="year" name="year" required>
+
+        <label for="performance">0 à 100:</label>
+        <input type="number" id="performance" name="performance" required>
+
+        <label for="Puissance">Puissance:</label>
+        <input type="text" id="Puissance" name="Puissance" required>
+
+        <label for="option">option:</label>
+        <input type="text" id="option" name="option" required>
+    
+        <label for="color">Couleur:</label>
+        <input type="text" id="color" name="color" required>
+    
+        <button type="submit">Ajouter</button>
+    </form>
+  
+    </div>
+
+    <script src="post.js"></script>
     <script>
         fetch('https://v07qg.mocklab.io/car')
         .then(response => response.json())
