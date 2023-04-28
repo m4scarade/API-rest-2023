@@ -1,0 +1,85 @@
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+      h2 {
+        text-align: center;
+        margin-top: 150px;
+      }
+      /* Style de base pour le bouton */
+      a {
+        display: inline-block; /* Afficher comme élément en ligne */
+        padding: 10px 20px; /* Espacement du contenu à l'intérieur du bouton */
+        background-color: black; /* Couleur de fond du bouton */
+        color: #fff; /* Couleur du texte du bouton */
+        text-decoration: none; /* Pas de soulignement par défaut */
+        border-radius: 5px; /* Coins arrondis du bouton */
+        transition: background-color 0.2s ease-in-out; /* Transition en douceur de la couleur de fond */
+      }
+
+      /* Effet de survol */
+      a:hover {
+        background-color: #3e4143; /* Nouvelle couleur de fond au survol */
+      }
+
+      /* Effet de clic */
+      a:active {
+        background-color: #3e4143; /* Nouvelle couleur de fond au clic */
+      }
+
+
+
+      #data {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+      }
+
+      #results {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+      }
+
+      .recherche_voiture {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+      }
+
+      .card {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        margin: 20px;
+        padding: 20px;
+        width: 300px;
+      }
+
+      .card h2 {
+        font-size: 24px;
+        margin: 0;
+      }
+
+      .card p {
+        margin: 10px 0;
+      }
+
+      .card img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+      }

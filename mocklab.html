@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Recherche de voitures</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Affichage de toute les données d'une API mocklab</h1>
+    <div class="recherche_voiture">
+        <a href="index.html">Retour à l'accueil</a>
+    </div>
+    <div id="data"></div>
+    <script>
+        fetch('https://v07qg.mocklab.io/car')
+        .then(response => response.json())
+        .then(data => {
+          // Affichage des données dans la page
+          const dataDiv = document.getElementById('data');
+          data.forEach(item => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+            const title = document.createElement('h2');
+            title.textContent = item.marque;
+            const description = document.createElement('p');
+            description.textContent = item.modele;
+            const performance = document.createElement('p');
+            performance.textContent = '0 à 100 : '+item.performance;
+            const puissance = document.createElement('p');
+            puissance.textContent = item.puissance + 'ch';
+            const caractéristique = document.createElement('p');
+            caractéristique.textContent = 'Option :'+JSON.stringify(item.caractéristique) ;
+            const color = document.createElement('p');
+            color.textContent = 'Couleur : '+JSON.stringify(item.color) ;
+            card.appendChild(title);
+            card.appendChild(description);
+            card.appendChild(color);
+            card.appendChild(performance);
+            card.appendChild(puissance);
+            card.appendChild(caractéristique);
+            dataDiv.appendChild(card);
+          });
+        })
+        .catch(error => console.error(error));
+    </script>
+</body>
+</html>
